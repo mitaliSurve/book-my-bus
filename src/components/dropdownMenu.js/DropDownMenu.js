@@ -5,6 +5,7 @@ import "../button/button.css";
 import "./dropdown.css";
 
 const DropDownMenu = ({ menu, onClick }) => {
+  
   return (
     <div className="card display display_column">
       {menu.map((menus) => (
@@ -20,4 +21,5 @@ DropDownMenu.propTypes = {
   menu: PropTypes.arrayOf(PropTypes.object),
   onClick: PropTypes.func,
 };
+
 export default DropDownMenu;
