@@ -1,0 +1,22 @@
+.button {
+  font-size: 5px;
+  border-radius: 2px;
+  padding: 2px 7px;
+  outline: none;
+  border: 1px solid #d84e55;
+  background-color: #d84e55;
+  text-transform: capitalize;
+  text-align: center;
+  cursor: pointer;
+}
+.button:hover {
+  color: white;
+}
+.button_light {
+    border: 0.5px solid #3e3e52;
+    background-color: #f8f4f4;
+}
+.button_light:hover {
+    background-color: #EFE7E7;
+    color: black;
+}

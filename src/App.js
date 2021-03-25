@@ -1,11 +1,12 @@
-import logo from "./logo.svg";
-import React from 'react';
+// import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
+import Dashboard from "./pages/dashboard";
 
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -18,9 +19,10 @@ const App = () => {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <Dashboard />
     </div>
   );
-}
+};
 
 export default App;
