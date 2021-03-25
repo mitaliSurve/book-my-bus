@@ -1,0 +1,20 @@
+.display {
+    display: flex;
+}
+.display_flex{
+    justify-content: flex-end;
+}
+.container {
+    background-color: #f7f7f7;
+    padding: 2px;
+    margin: 5px;
+    border: 5px;
+}
+.seat {
+    border: 0.5px solid gray;
+    padding: 2px 5px;
+    width: 15px;
+    height: 4px;
+    border-radius: 1.5px;
+    margin: 1px 2px;
+}
