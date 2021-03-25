@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import './button.css'
 
-const Button = ({ children, className }) => {
+const Button = ({ children, className, onClick }) => {
     return (
-        <button className={className}>
+        <button className={className} onClick={onClick}>
             {children}
         </button>
     );
@@ -13,5 +13,6 @@ const Button = ({ children, className }) => {
 Button.propTypes = {
   children: PropTypes.string,
   className: PropTypes.string,
+  onClick: PropTypes.func,
 }
 export default Button;

@@ -1,26 +1,30 @@
 .display {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
-.display_flex{
-    justify-content: flex-end;
+.display_flex {
+  justify-content: flex-end;
+}
+.display_column {
+  flex-direction: column;
+  margin-top: 22px;
 }
 .container {
-    background-color: #f7f7f7;
-    padding: 2px;
-    margin: 5px;
-    border: 5px;
-    justify-content: center;
+  background-color: #f7f7f7;
+  padding: 2px;
+  margin: 5px;
+  border: 5px;
+  justify-content: center;
 }
 .seat {
-    border: 0.5px solid gray;
-    padding: 2px 5px;
-    width: 15px;
-    height: 4px;
-    border-radius: 1.5px;
-    margin: 1px 2px;
-    cursor: pointer;
+  border: 0.5px solid gray;
+  padding: 2px 5px;
+  width: 15px;
+  height: 4px;
+  border-radius: 1.5px;
+  margin: 1px 2px;
+  cursor: pointer;
 }
 .seat:hover {
-    border: 0.6px solid gray;
+  border: 0.6px solid gray;
 }
