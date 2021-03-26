@@ -1,13 +1,14 @@
 .button {
-  font-size: 5px;
+  font-size: 15px;
   border-radius: 2px;
-  padding: 2px 7px;
+  padding: 7px 20px;
   outline: none;
   border: 1px solid #d84e55;
   background-color: #d84e55;
   text-transform: capitalize;
   text-align: center;
   cursor: pointer;
+  margin: 5px;
 }
 .button:hover {
   color: white;

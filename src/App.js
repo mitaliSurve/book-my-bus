@@ -1,7 +1,7 @@
 // import logo from "./logo.svg";
 import React from "react";
 import "./App.css";
-import Dashboard from "./pages/dashboard";
+import Dashboard from "./pages/dashboard/Dashboard";
 
 const App = () => {
   return (

@@ -1,0 +1,50 @@
+.display {
+  display: flex;
+}
+.display_flex {
+  display: flex;
+  justify-content: space-between;
+}
+.display_column {
+  flex-direction: column;
+  margin-top: 22px;
+}
+.container {
+  background-color: #f7f7f7;
+  padding: 5px 15px;
+  margin: 5px 15px;
+  border: 5px;
+}
+.grid_container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  grid-gap: 10px;
+  background-color: #f7f7f7;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat( auto-fit, minmax(170px, 1fr) )
+}
+
+.grid_container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 15px;
+  font-size: 25px;
+}
+
+.seat {
+  border: 0.5px solid gray;
+  font-size: 10px;
+  padding: 2px 5px;
+  width: 100px;
+  border-radius: 1.5px;
+  margin: 25px 2px;
+  cursor: pointer;
+}
+.seat:hover {
+  border: 1px solid gray;
+}
+
+.margin {
+  margin-right: 5px;
+}
