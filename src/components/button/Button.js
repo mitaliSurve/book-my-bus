@@ -18,4 +18,5 @@ Button.propTypes = {
   className: PropTypes.string,
   onClick: PropTypes.func,
 };
+
 export default Button;
