@@ -1,18 +1,21 @@
 .btn_group button {
   font-size: 15px;
   border-radius: 2px;
-  border: 1px solid #d84e55;
+  border: 1px solid rgb(216, 79, 86);
   background-color: #d84e55;
+  outline-color: #d84e55;
   padding: 7px 20px;
   text-transform: capitalize;
   text-align: center;
   cursor: pointer;
   float: left;
   margin: 5px 0px;
+  color: white;
 }
 
 .btn_group button:hover {
   color: white;
+  opacity: 80%;
 }
 
 /* Clear floats (clearfix hack) */

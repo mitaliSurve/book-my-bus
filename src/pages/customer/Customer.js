@@ -1,14 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import cx from 'classnames';
+import cx from "classnames";
 import Dialog from "../../components/dialogMenu/Dialog";
 import style from "../customer/customer.module.css";
 
 const Customer = ({ onClose }) => {
   return (
     <Dialog header="Customer Form" onClose={onClose} action="book">
-      <form>
-        <div className={style.root}>
+        <form className={style.grid_container}>
           <label htmlFor="name" className={cx(style.label, style.label_color)}>
             Name
           </label>
@@ -20,7 +19,10 @@ const Customer = ({ onClose }) => {
             className={style.input}
           />
 
-          <label htmlFor="seatNo" className={cx(style.label, style.label_color)}>
+          <label
+            htmlFor="seatNo"
+            className={cx(style.label, style.label_color)}
+          >
             Seat no
           </label>
           <input
@@ -52,8 +54,7 @@ const Customer = ({ onClose }) => {
             placeholder="Price"
             className={style.input}
           />
-        </div>
-      </form>
+        </form>
     </Dialog>
   );
 };

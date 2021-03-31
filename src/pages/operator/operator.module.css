@@ -9,7 +9,7 @@
 .grid_container {
   display: grid;
   grid-template-columns: auto auto;
-  grid-gap: 20px 100px;
+  grid-gap: 20px 50px;
   padding: 10px 0px;
   justify-content: space-evenly;
   align-items: center;
