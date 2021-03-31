@@ -1,0 +1,39 @@
+.root {
+  padding: 15px;
+}
+/* .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+} */
+.grid_container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px 100px;
+  padding: 10px 0px;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+}
+
+.label {
+  font-size: 14px;
+  text-align: left;
+  text-transform: capitalize;
+}
+.label_color {
+  color: gray;
+}
+.margin {
+  margin-left: 25px;
+}
+
+.input {
+  /* width: 100%; */
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

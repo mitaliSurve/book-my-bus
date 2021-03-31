@@ -7,7 +7,7 @@ import ButtonStyle from "../button/button.module.css";
 
 import Button from "../button/Button";
 
-const Dialog = ({ onClose, header, children }) => {
+const Dialog = ({ onClose, header, children, action }) => {
   return (
     <div className={Styles.modal}>
       <div className={Styles.modal_content}>
@@ -17,10 +17,11 @@ const Dialog = ({ onClose, header, children }) => {
             &times;
           </span>
         </div>
-        <div className={Styles.modal_body}>
-          {children}
-        </div>
+        <div className={Styles.modal_body}>{children}</div>
         <div className={Styles.modal_footer}>
+          <Button className={ButtonStyle.button} onClick={onClose}>
+            {action}
+          </Button>
           <Button
             className={cx(ButtonStyle.button, ButtonStyle.button_light)}
             onClick={onClose}
@@ -37,6 +38,7 @@ Dialog.propTypes = {
   onClose: PropTypes.func,
   header: PropTypes.string,
   children: PropTypes.node,
+  action: PropTypes.string,
 };
 
 export default Dialog;
