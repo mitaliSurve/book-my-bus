@@ -19,7 +19,7 @@ const Dialog = ({ onClose, header, children, action }) => {
         </div>
         <div className={style.modal_body}>{children}</div>
         <div className={style.modal_footer}>
-          <Button className={buttonStyle.button} onClick={onClose}>
+          <Button className={cx(buttonStyle.button, style.margin)} onClick={onClose}>
             {action}
           </Button>
           <Button

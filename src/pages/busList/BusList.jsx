@@ -1,15 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
+import cx from 'classnames';
 
 import Button from "../../components/button/Button";
 
 import buttonstyle from "../../components/button/button.module.css";
 import style from "./buslist.module.css";
 
-const BusList = ({ onClick, busList, name }) => {
+const BusList = ({ onClick, busList, name, className }) => {
 
   return (
-    <div className={style.dropdown}>
+    <div className={cx(style.dropdown, className)}>
       <Button className={buttonstyle.button}>
         {name}<span className={style.margin}>+</span>
       </Button>
@@ -28,6 +29,7 @@ BusList.propTypes = {
   busList: PropTypes.arrayOf(PropTypes.object),
   onClick: PropTypes.func,
   name: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default BusList;

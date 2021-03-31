@@ -24,12 +24,16 @@ const Dashboard = () => {
     console.log(customerMenu);
   };
 
+
+  const handle = (s) => {
+    console.log(s, "jhhhhhhhhhhhhhhhhhhg-----------------------");
+  }
   return (
-    <>
+    <div className={style.root}>
       <div className={style.display_flex}>
         <div>
           <BusList name="bus" busList={busesName} />
-          <BusList name="Customer" busList={busesName} />
+          <BusList name="Customer" busList={busesName} className={style.margin} />
         </div>
         <div className={cx(style.display, style.margin)}>
           <ButtonGroup>Operator</ButtonGroup>
@@ -42,7 +46,7 @@ const Dashboard = () => {
           {seatNo.map((seats) => (
             <div className={style.seat} key={seats.id}  onClick={toggleOperatorMenu}>
               {seats.seatNumber.map((s) => (
-                <div key={s.id} className={style.seat_label}>
+                <div key={s.id} className={style.seat_label} onClick={() => handle(s)}>
                   {s.seat}
                 </div>
               ))}
@@ -54,7 +58,7 @@ const Dashboard = () => {
       {operatorMenu && <Operator onClose={toggleOperatorMenu} />}
 
       {customerMenu && <Customer onClose={toggleCustomerMenu} />}
-    </>
+    </div>
   );
 };
 
