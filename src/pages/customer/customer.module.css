@@ -14,4 +14,11 @@
 .label {
   display: flex;
   justify-content: flex-start;
+  font-size: 14px;
+  text-align: left;
+  text-transform: capitalize;
+  margin-top: 5px;
+}
+.label_color {
+  color: gray;
 }
