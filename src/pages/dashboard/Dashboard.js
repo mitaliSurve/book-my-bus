@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import cx from "classnames";
 
 import style from "./dashboard.module.css";
@@ -11,8 +11,8 @@ import Operator from "../operator/Operator";
 import Customer from "../customer/Customer";
 
 const Dashboard = () => {
-  const [operatorMenu, setOperatorMenu] = React.useState(false);
-  const [customerMenu, setCustomerMenu] = React.useState(false);
+  const [operatorMenu, setOperatorMenu] = useState(false);
+  const [customerMenu, setCustomerMenu] = useState(false);
 
   const toggleOperatorMenu = () => {
     setOperatorMenu(!operatorMenu);
@@ -32,7 +32,7 @@ const Dashboard = () => {
           <BusList name="Customer" busList={busesName} />
         </div>
         <div className={cx(style.display, style.margin)}>
-          <ButtonGroup onClick={toggleOperatorMenu}>Operator</ButtonGroup>
+          <ButtonGroup>Operator</ButtonGroup>
           <ButtonGroup onClick={toggleCustomerMenu}>Customer</ButtonGroup>
         </div>
       </div>
@@ -40,9 +40,9 @@ const Dashboard = () => {
       <div className={style.container}>
         <div className={style.grid_container}>
           {seatNo.map((seats) => (
-            <div className={style.seat} key={seats.id}>
+            <div className={style.seat} key={seats.id}  onClick={toggleOperatorMenu}>
               {seats.seatNumber.map((s) => (
-                <div key={s} className={style.seat_label}>
+                <div key={s.id} className={style.seat_label}>
                   {s.seat}
                 </div>
               ))}
