@@ -3,17 +3,17 @@ import PropTypes from "prop-types";
 
 import Button from "../../components/button/Button";
 
-import ButtonStyle from "../../components/button/button.module.css";
-import Style from "./buslist.module.css";
+import buttonstyle from "../../components/button/button.module.css";
+import style from "./buslist.module.css";
 
 const BusList = ({ onClick, busList, name }) => {
 
   return (
-    <div className={Style.dropdown}>
-      <Button className={ButtonStyle.button}>
-        {name}<span style={{ marginLeft: 10 }}>+</span>
+    <div className={style.dropdown}>
+      <Button className={buttonstyle.button}>
+        {name}<span className={style.margin}>+</span>
       </Button>
-      <div className={Style.dropdown_content} onClick={onClick}>
+      <div className={style.dropdown_content} onClick={onClick}>
         {busList.map((list) => (
           <div key={list.id}>
             <a href="#">{list.name}</a>

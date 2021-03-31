@@ -3,19 +3,19 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import Button from "../button/Button";
 
-import ButtonCss from "../button/button.module.css";
-import Styles from "./dropdown.module.css";
+import buttonStyle from "../button/button.module.css";
+import style from "./dropdown.module.css";
 
 const DropDownMenu = ({ menu, onClick }) => {
   return (
-    <div className={cx(Styles.card, Styles.display)}>
+    <div className={cx(style.card, style.display)}>
       {menu.map((menus) => (
         <Button
           key={menus}
           className={cx(
-            ButtonCss.button,
-            ButtonCss.button_light,
-            Styles.margin
+            buttonStyle.button,
+            buttonStyle.button_light,
+            style.margin
           )}
           onClick={onClick}
         >

@@ -2,28 +2,28 @@ import React from "react";
 import cx from "classnames";
 import PropTypes from "prop-types";
 
-import Styles from "./dialog.module.css";
-import ButtonStyle from "../button/button.module.css";
+import style from "./dialog.module.css";
+import buttonStyle from "../button/button.module.css";
 
 import Button from "../button/Button";
 
 const Dialog = ({ onClose, header, children, action }) => {
   return (
-    <div className={Styles.modal}>
-      <div className={Styles.modal_content}>
-        <div className={cx(Styles.modal_header, Styles.display)}>
+    <div className={style.modal}>
+      <div className={style.modal_content}>
+        <div className={cx(style.modal_header, style.display)}>
           <p>{header}</p>
-          <span className={Styles.close} onClick={onClose}>
+          <span className={style.close} onClick={onClose}>
             &times;
           </span>
         </div>
-        <div className={Styles.modal_body}>{children}</div>
-        <div className={Styles.modal_footer}>
-          <Button className={ButtonStyle.button} onClick={onClose}>
+        <div className={style.modal_body}>{children}</div>
+        <div className={style.modal_footer}>
+          <Button className={buttonStyle.button} onClick={onClose}>
             {action}
           </Button>
           <Button
-            className={cx(ButtonStyle.button, ButtonStyle.button_light)}
+            className={cx(buttonStyle.button, buttonStyle.button_light)}
             onClick={onClose}
           >
             Close
