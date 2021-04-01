@@ -26,7 +26,6 @@ const Operator = ({ onClose, operatorSeat }) => {
             value={operatorSeat.seat}
             className={style.input}
           /> */}
-          {/* <label className={style.label}>S1</label> */}
 
           <label htmlFor="price" className={cx(style.label, style.label_color)}>
             Price
