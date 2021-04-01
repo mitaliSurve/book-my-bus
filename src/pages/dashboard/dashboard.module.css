@@ -43,16 +43,25 @@
   background-color: white;
 }
 
-/* .seat:hover {
-  border: 1px solid gray;
-} */
-
 .seat_label {
   border-bottom: 1px solid;
   font-size: 15px;
   padding: 10px;
 }
 
+.seat_label:hover {
+  background-color: indianred;
+  color: #f7f7f7;
+  border-bottom: 1px solid black;
+}
+
 .margin {
   margin-left: 10px;
+}
+
+.seat_label_color {
+  background-color: gainsboro;
+  border-bottom: 1px solid;
+  font-size: 15px;
+  padding: 10px;
 }

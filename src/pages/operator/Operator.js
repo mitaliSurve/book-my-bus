@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import cx from "classnames";
 import PropTypes from "prop-types";
 
@@ -6,8 +6,8 @@ import style from "../operator/operator.module.css";
 import Dialog from "../../components/dialogMenu/Dialog";
 import Switch from "../../components/switch/Switch";
 
-const Operator = ({ onClose }) => {
-  const [seat, setSeat] = useState("");
+const Operator = ({ onClose, operatorSeat }) => {
+  // const [seat, setSeat] = useState("");
 
   return (
     <Dialog header="Operator Form" onClose={onClose} action="Submit">
@@ -19,13 +19,13 @@ const Operator = ({ onClose }) => {
           >
             Seat No.
           </label>
-          <input
-            type="number"
+          <span className={style.label}>{operatorSeat.seat}</span>
+          {/* <input
+            type="text"
             id="seatNo"
-            value={seat}
-            onChange={(event) => setSeat(event.target.value)}
+            value={operatorSeat.seat}
             className={style.input}
-          />
+          /> */}
           {/* <label className={style.label}>S1</label> */}
 
           <label htmlFor="price" className={cx(style.label, style.label_color)}>
@@ -50,6 +50,7 @@ const Operator = ({ onClose }) => {
 
 Operator.propTypes = {
   onClose: PropTypes.func,
+  operatorSeat: PropTypes.object,
 };
 
 export default Operator;
