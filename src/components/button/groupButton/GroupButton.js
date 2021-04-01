@@ -16,6 +16,6 @@ ButtonGroup.propTypes = {
     PropTypes.array
   ]),
   onClick: PropTypes.func,
-  value: PropTypes.string,
+  value: PropTypes.bool,
 };
 export default ButtonGroup;

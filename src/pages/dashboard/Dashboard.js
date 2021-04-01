@@ -36,6 +36,8 @@ const Dashboard = () => {
     setOperatorSeatNo(s);
     console.log(s, "jhhhhhhhhhhhhhhhhhhg-----------------------", s.seat);
   };
+  
+  console.log(busesName, "bus name===========================================");
 
   return (
     <div className={style.root}>
@@ -46,10 +48,10 @@ const Dashboard = () => {
             name="Customer"
             busList={CustomerName}
             className={style.margin}
-          />
+            />
         </div>
         <div className={cx(style.display, style.margin)}>
-          <ButtonGroup value={operatorMenu}>Operator</ButtonGroup>
+          <ButtonGroup>Operator</ButtonGroup>
           <ButtonGroup onClick={toggleCustomerMenu}>Customer</ButtonGroup>
         </div>
       </div>
