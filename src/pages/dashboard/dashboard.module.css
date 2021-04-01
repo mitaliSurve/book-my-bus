@@ -47,6 +47,7 @@
   border-bottom: 1px solid;
   font-size: 15px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .seat_label:hover {

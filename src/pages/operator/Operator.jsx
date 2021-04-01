@@ -1,16 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import cx from "classnames";
 import PropTypes from "prop-types";
 
 import style from "../operator/operator.module.css";
 import Dialog from "../../components/dialogMenu/Dialog";
-import Switch from "../../components/switch/Switch";
+import ToggleSwitch from "../../components/switch/Switch";
 
 const Operator = ({ onClose, operatorSeat }) => {
-  // const [seat, setSeat] = useState("");
+  const [price, setPrice] = useState({ price: "" });
+  const [booking, setbooking] = useState(false);
+
+  const changePrice = (event) => {
+    setPrice((prevProps) => ({
+      ...prevProps,
+      [event.target.name]: event.target.value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onClose();
+    console.log(price, booking);
+  };
+
+  const changeBookingStatus = (checked) => {
+    setbooking(checked);
+  };
 
   return (
-    <Dialog header="Operator Form" onClose={onClose} action="Submit">
+    <Dialog
+      header="Operator Form"
+      onClose={onClose}
+      action="Submit"
+      onSubmit={handleSubmit}
+    >
       <div className={style.root}>
         <form className={style.grid_container}>
           <label
@@ -33,14 +56,21 @@ const Operator = ({ onClose, operatorSeat }) => {
           <input
             type="text"
             id="price"
-            name="seatPrice"
+            name="price"
+            value={price.price}
+            onChange={changePrice}
             placeholder="Your Price.."
             className={style.input}
           />
           {/* <span className={style.label}>&#x20B9; 500</span> */}
 
           <label className={cx(style.label, style.label_color)}>Booking</label>
-          <Switch className={style.label} />
+          <ToggleSwitch
+            id="newsletter"
+            checked={booking}
+            onChange={changeBookingStatus}
+            className={style.label}
+          />
         </form>
       </div>
     </Dialog>

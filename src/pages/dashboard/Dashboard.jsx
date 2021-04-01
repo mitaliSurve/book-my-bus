@@ -17,6 +17,7 @@ const Dashboard = () => {
   const [customerMenu, setCustomerMenu] = useState(false);
   const [selectedSeat, setSelectedSeat] = useState("");
   const [operatorSeatNo, setOperatorSeatNo] = useState("");
+  // const [buttonValue, setButtonValue] =  useState('');
 
   const toggleOperatorMenu = () => {
     setOperatorMenu(!operatorMenu);
@@ -26,18 +27,17 @@ const Dashboard = () => {
     setCustomerMenu(!customerMenu);
   };
 
-  // const handleToggle = () =>  {
-  //   toggleCustomerMenu();
-  //   toggleOperatorMenu();
-  // }
-
   const selectSeat = (s) => {
     setSelectedSeat(s.seat);
     setOperatorSeatNo(s);
     console.log(s, "jhhhhhhhhhhhhhhhhhhg-----------------------", s.seat);
   };
-  
-  console.log(busesName, "bus name===========================================");
+
+  // const handleClick = () => {
+  //   setButtonValue("operator");
+  // }
+
+  // console.log(busesName, "bus name===========================================");
 
   return (
     <div className={style.root}>
@@ -48,7 +48,7 @@ const Dashboard = () => {
             name="Customer"
             busList={CustomerName}
             className={style.margin}
-            />
+          />
         </div>
         <div className={cx(style.display, style.margin)}>
           <ButtonGroup>Operator</ButtonGroup>

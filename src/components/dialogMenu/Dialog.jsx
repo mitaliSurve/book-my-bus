@@ -7,7 +7,7 @@ import buttonStyle from "../button/button.module.css";
 
 import Button from "../button/Button";
 
-const Dialog = ({ onClose, header, children, action }) => {
+const Dialog = ({ onClose, header, children, action, onSubmit }) => {
   return (
     <div className={style.modal}>
       <div className={style.modal_content}>
@@ -19,7 +19,7 @@ const Dialog = ({ onClose, header, children, action }) => {
         </div>
         <div className={style.modal_body}>{children}</div>
         <div className={style.modal_footer}>
-          <Button className={cx(buttonStyle.button, style.margin)} onClick={onClose}>
+          <Button className={cx(buttonStyle.button, style.margin)} onClick={onSubmit}>
             {action}
           </Button>
           <Button
@@ -39,6 +39,7 @@ Dialog.propTypes = {
   header: PropTypes.string,
   children: PropTypes.node,
   action: PropTypes.string,
+  onSubmit: PropTypes.func,
 };
 
 export default Dialog;
