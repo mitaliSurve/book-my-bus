@@ -50,7 +50,7 @@
 }
 
 .seat_label:hover {
-  background-color: indianred;
+  background-color: #d84e55;
   color: #f7f7f7;
   border-bottom: 1px solid black;
 }

@@ -20,13 +20,16 @@ const Dashboard = () => {
 
   const toggleOperatorMenu = () => {
     setOperatorMenu(!operatorMenu);
-    console.log(operatorMenu);
   };
 
   const toggleCustomerMenu = () => {
     setCustomerMenu(!customerMenu);
-    console.log(customerMenu);
   };
+
+  // const handleToggle = () =>  {
+  //   toggleCustomerMenu();
+  //   toggleOperatorMenu();
+  // }
 
   const selectSeat = (s) => {
     setSelectedSeat(s.seat);
@@ -46,7 +49,7 @@ const Dashboard = () => {
           />
         </div>
         <div className={cx(style.display, style.margin)}>
-          <ButtonGroup>Operator</ButtonGroup>
+          <ButtonGroup value={operatorMenu}>Operator</ButtonGroup>
           <ButtonGroup onClick={toggleCustomerMenu}>Customer</ButtonGroup>
         </div>
       </div>
