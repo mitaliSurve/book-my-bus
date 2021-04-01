@@ -1,34 +1,27 @@
 .btn_group button {
-  font-size: 15px;
-  border-radius: 2px;
-  border: 1px solid rgb(216, 79, 86);
   background-color: #d84e55;
-  outline-color: #d84e55;
-  padding: 7px 20px;
-  text-transform: capitalize;
-  text-align: center;
+  border: 1px solid #d84e55;
+  color: white;
+  padding: 10px 24px;
   cursor: pointer;
-  float: left;
-  color: white;
+  display: block;
 }
 
-.btn_group button:hover {
-  color: white;
-  opacity: 80%;
+.btn_group button:active{
+  background-color: ivory;
 }
 
-/* Clear floats (clearfix hack) */
-.btn_group:after {
-  content: "";
-  clear: both;
-  display: table;
+.btn_group button:focus{
+  background-color: white;
+  color: #d84e55;
+  border: 1px solid #d84e55;
 }
-
 .btn_group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
+  border-bottom: none; /* Prevent double borders */
 }
 
 /* Add a background color on hover */
 .btn_group button:hover {
-  background-color: #d84e55;
+  background-color: #EFE7E7;
+  color: #d84e55;
 }

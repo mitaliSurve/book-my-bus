@@ -10,6 +10,7 @@ import { busesName } from "../../constant/BusName";
 import Operator from "../operator/Operator";
 import Customer from "../customer/Customer";
 import { CustomerName } from "../../constant/CustomerList";
+// import Tab from "../../components/tab/Tab";
 
 const Dashboard = () => {
   const [operatorMenu, setOperatorMenu] = useState(false);
@@ -60,6 +61,8 @@ const Dashboard = () => {
       {operatorMenu && <Operator onClose={toggleOperatorMenu} />}
 
       {customerMenu && <Customer onClose={toggleCustomerMenu} />}
+
+      {/* <Tab /> */}
     </div>
   );
 };
