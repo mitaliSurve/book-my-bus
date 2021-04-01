@@ -2,7 +2,6 @@
   font-size: 15px;
   border-radius: 2px;
   padding: 7px 20px;
-  outline: none;
   border: 1px solid #d84e55;
   background-color: #d84e55;
   text-transform: capitalize;
@@ -10,16 +9,21 @@
   cursor: pointer;
   color: white;
 }
+.button:focus {
+  outline: none !important;
+  border-color: #d84e55;
+  box-shadow: 0 0 2px #d84e55;
+}
 .button:hover {
   color: white;
-background-color: #eb5c63;
+  background-color: #eb5c63;
 }
 .button_light {
-    border: 0.5px solid #3e3e52;
-    background-color: gray;
-    opacity: 50%;
+  border: 0.5px solid #3e3e52;
+  background-color: gray;
+  opacity: 50%;
 }
 .button_light:hover {
-    background-color: #EFE7E7;
-    color: black;
+  background-color: #efe7e7;
+  color: black;
 }

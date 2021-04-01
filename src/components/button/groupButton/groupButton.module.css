@@ -6,7 +6,10 @@
   cursor: pointer;
   display: block;
 }
-
+.btn_group button:focus { 
+  outline: none !important;
+  border-color: #000000;
+}
 .btn_group button:active{
   background-color: ivory;
 }
