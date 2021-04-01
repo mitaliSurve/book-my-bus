@@ -9,6 +9,7 @@ import { seatNo } from "../../constant/SeatNo";
 import { busesName } from "../../constant/BusName";
 import Operator from "../operator/Operator";
 import Customer from "../customer/Customer";
+import { CustomerName } from "../../constant/CustomerList";
 
 const Dashboard = () => {
   const [operatorMenu, setOperatorMenu] = useState(false);
@@ -34,7 +35,7 @@ const Dashboard = () => {
       <div className={style.display_flex}>
         <div>
           <BusList name="bus" busList={busesName} />
-          <BusList name="Customer" busList={busesName} className={style.margin} />
+          <BusList name="Customer" busList={CustomerName} className={style.margin} />
         </div>
         <div className={cx(style.display, style.margin)}>
           <ButtonGroup>Operator</ButtonGroup>
