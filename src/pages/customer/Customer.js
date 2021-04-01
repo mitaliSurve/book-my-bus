@@ -47,13 +47,14 @@ const Customer = ({ onClose }) => {
           <label htmlFor="price" className={cx(style.label, style.label_color)}>
             Price
           </label>
-          <input
+          <span className={style.label}>&#x20B9; 500</span>
+          {/* <input
             type="text"
             id="price"
             name="seatPrice"
             placeholder="Price"
             className={style.input}
-          />
+          /> */}
         </form>
     </Dialog>
   );
