@@ -11,7 +11,7 @@ const BusList = ({ onClick, busList, name, className }) => {
 
   return (
     <div className={cx(style.dropdown, className)}>
-      <Button className={buttonstyle.button}>
+      <Button className={buttonstyle.button} onClick={onClick}>
         {name}<span className={style.margin}>+</span>
       </Button>
       <div className={style.dropdown_content} onClick={onClick}>

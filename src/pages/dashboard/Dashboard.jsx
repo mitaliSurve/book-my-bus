@@ -10,6 +10,7 @@ import { busesName } from "../../constant/BusName";
 import Operator from "../operator/Operator";
 import Customer from "../customer/Customer";
 import { CustomerName } from "../../constant/CustomerList";
+import BusSeats from "../seats/Seat";
 // import Tab from "../../components/tab/Tab";
 
 const Dashboard = () => {
@@ -17,7 +18,7 @@ const Dashboard = () => {
   const [customerMenu, setCustomerMenu] = useState(false);
   const [selectedSeat, setSelectedSeat] = useState("");
   const [operatorSeatNo, setOperatorSeatNo] = useState("");
-  // const [buttonValue, setButtonValue] =  useState('');
+  const [buttonValue, setButtonValue] = useState("");
 
   const toggleOperatorMenu = () => {
     setOperatorMenu(!operatorMenu);
@@ -33,9 +34,9 @@ const Dashboard = () => {
     console.log(s, "jhhhhhhhhhhhhhhhhhhg-----------------------", s.seat);
   };
 
-  // const handleClick = () => {
-  //   setButtonValue("operator");
-  // }
+  const handleClick = () => {
+    setButtonValue(buttonValue, "operator");
+  };
 
   // console.log(busesName, "bus name===========================================");
 
@@ -51,36 +52,12 @@ const Dashboard = () => {
           />
         </div>
         <div className={cx(style.display, style.margin)}>
-          <ButtonGroup>Operator</ButtonGroup>
+          <ButtonGroup onClick={handleClick}>Operator</ButtonGroup>
           <ButtonGroup onClick={toggleCustomerMenu}>Customer</ButtonGroup>
         </div>
       </div>
 
-      <div className={style.container}>
-        <div className={style.grid_container}>
-          {seatNo.map((seats) => (
-            <div
-              className={style.seat}
-              key={seats.id}
-              onClick={toggleOperatorMenu}
-            >
-              {seats.seatNumber.map((s) => (
-                <div
-                  key={s.id}
-                  className={
-                    s.seat === selectedSeat
-                      ? style.seat_label_color
-                      : style.seat_label
-                  }
-                  onClick={() => selectSeat(s)}
-                >
-                  {s.seat}
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
+      <BusSeats selectSeatNo={seatNo} selectedSeat={selectedSeat} onClick={selectSeat}/>
 
       {operatorMenu && (
         <Operator operatorSeat={operatorSeatNo} onClose={toggleOperatorMenu} />
