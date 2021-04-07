@@ -14,18 +14,17 @@ const CustomerContainer = () => {
 
   const selectSeat = (s) => {
     setSelectedSeat(s.seat);
-    console.log(s, "jhhhhhhhhhhhhhhhhhhg-----------------------", s.seat);
   };
 
   return (
-    <div>
+    <>
       <BusSeats
         selectSeatNo={seatNo}
         selectedSeat={selectedSeat}
         onClick={selectSeat}
       />
       {selectedSeat && <Customer onClose={toggleCustomerMenu} />}
-    </div>
+    </>
   );
 };
 

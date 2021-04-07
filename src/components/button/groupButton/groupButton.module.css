@@ -1,4 +1,4 @@
-.btn_group button {
+.btnGroup button {
   background-color: #EFE7E7;
   border: 1px solid #d84e55;
   color: #000000;
@@ -6,25 +6,25 @@
   cursor: pointer;
   display: block;
 }
-.btn_group button:focus { 
+.btnGroup button:focus { 
   outline: none !important;
   border-color: #000000;
 }
-.btn_group button:active{
+.btnGroup button:active{
   background-color: ivory;
 }
 
-.btn_group button:focus{
+.btnGroup button:focus{
   background-color: white;
   color: #d84e55;
   border: 1px solid #d84e55;
 }
-.btn_group button:not(:last-child) {
+.btnGroup button:not(:last-child) {
   border-bottom: none; /* Prevent double borders */
 }
 
 /* Add a background color on hover */
-.btn_group button:hover {
+.btnGroup button:hover {
   background-color: #EFE7E7;
   color: #d84e55;
 }

@@ -16,7 +16,6 @@ const OperatorContainer = () => {
   const selectSeat = (s) => {
     setSelectedSeat(s.seat);
     setOperatorSeatNo(s);
-    console.log(s, "jhhhhhhhhhhhhhhhhhhg-----------------------", s);
   };
 
   return (

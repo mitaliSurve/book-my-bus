@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import cx from "classnames";
+import style from "./tab.module.css";
 
 const TabItemComponent = ({
   icon = "",
@@ -7,14 +9,15 @@ const TabItemComponent = ({
   onItemClicked = () => console.error("You passed no action to the component"),
   isActive = false,
 }) => {
-
   return (
     <div
-      className={isActive ? "tabitem" : "tabitem tabitem--inactive"}
+      className={
+        isActive ? style.tabitem : cx(style.tabitem, style.tabitemInactive)
+      }
       onClick={onItemClicked}
     >
       <i className={icon}></i>
-      <p className="tabitem__title">{title}</p>
+      <p className={style.tabitemTitle}>{title}</p>
     </div>
   );
 };

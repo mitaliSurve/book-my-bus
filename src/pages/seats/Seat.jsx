@@ -1,5 +1,4 @@
 import React from "react";
-// import cx from 'classnames';
 import PropTypes from "prop-types";
 import style from "./seat.module.css";
 
@@ -57,4 +56,5 @@ BusSeats.propTypes = {
   selectedSeat: PropTypes.string,
   onClick: PropTypes.func,
 };
+
 export default BusSeats;

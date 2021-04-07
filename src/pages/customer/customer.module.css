@@ -11,7 +11,6 @@
 input:focus { 
   outline: none !important;
   border-color: #d84e55;
-  /* box-shadow: 0 0 1px #000000; */
 }
 .grid_container {
   display: grid;
