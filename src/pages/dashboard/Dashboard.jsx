@@ -5,12 +5,10 @@ import style from "./dashboard.module.css";
 
 import BusList from "../busList/BusList";
 import ButtonGroup from "../../components/button/groupButton/GroupButton";
-// import { seatNo } from "../../constant/SeatNo";
 import { busesName } from "../../constant/BusName";
 import { CustomerName } from "../../constant/CustomerList";
 import CustomerContainer from "../Customer";
 import OperatorContainer from "../Operator";
-// import BusSeats from "../seats/Seat";
 
 const btnGroup = [
   { id: 1, title: "Operator" },
@@ -18,33 +16,11 @@ const btnGroup = [
 ];
 
 const Dashboard = () => {
-  // const [operatorMenu, setOperatorMenu] = useState(false);
-  // const [customerMenu, setCustomerMenu] = useState(false);
-  // const [selectedSeat, setSelectedSeat] = useState("");
-  // const [operatorSeatNo, setOperatorSeatNo] = useState("");
-
   const [selectedButton, setSelectedButton] = useState('');
 
   const handleSelect = (btn) => {
-    console.log('--------------->>>', btn);
     setSelectedButton(btn.title);
   };
-
-  // const toggleOperatorMenu = () => {
-  //   setOperatorMenu(!operatorMenu);
-  // };
-
-  // const toggleCustomerMenu = () => {
-  //   setCustomerMenu(!customerMenu);
-  // };
-
-  // const selectSeat = (s) => {
-  //   setSelectedSeat(s.seat);
-  //   setOperatorSeatNo(s);
-  //   console.log(s, "jhhhhhhhhhhhhhhhhhhg-----------------------", s.seat);
-  // };
-
-  console.log(busesName, "bus name===========================================");
 
   return (
     <div className={style.root}>
@@ -74,19 +50,6 @@ const Dashboard = () => {
       </div>
 
       {selectedButton === 'Customer' ? <CustomerContainer /> : <OperatorContainer />}
-
-      {/* <BusSeats
-        selectSeatNo={seatNo}
-        selectedSeat={selectedSeat}
-        onClick={selectSeat}
-      /> */}
-{/* 
-      {operatorMenu && (
-        <Operator operatorSeat={operatorSeatNo} onClose={toggleOperatorMenu} />
-      )}
-
-      {customerMenu && <Customer onClose={toggleCustomerMenu} />} */}
-
     </div>
   );
 };

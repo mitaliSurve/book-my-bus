@@ -3,6 +3,8 @@ import { seatNo } from "../constant/SeatNo";
 import BusSeats from "./seats/Seat";
 import Operator from '../pages/operator/Operator.jsx'
 
+const array = [];
+
 const OperatorContainer = () => {
   const [operatorMenu, setOperatorMenu] = useState(false);
   const [selectedSeat, setSelectedSeat] = useState("");
@@ -15,18 +17,20 @@ const OperatorContainer = () => {
 
   const selectSeat = (s) => {
     setSelectedSeat(s.seat);
+    array.push(s);
     setOperatorSeatNo(s);
   };
 
   return (
-    <div>
+    <>
       <BusSeats
         selectSeatNo={seatNo}
         selectedSeat={selectedSeat}
+        seatedArray={array}
         onClick={(s) => selectSeat(s)}
       />
       {selectedSeat && <Operator operatorSeat={operatorSeatNo} onClose={toggleOperatorMenu} />}
-    </div>
+    </>
   );
 }
 

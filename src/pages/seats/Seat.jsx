@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import style from "./seat.module.css";
 
-const BusSeats = ({ selectSeatNo, selectedSeat, onClick }) => {
+const BusSeats = ({ selectSeatNo, selectedSeat, onClick, seatedArray }) => {
+  console.log(selectedSeat ,seatedArray, '----------->>> selected seat');
   return (
     <div className={style.container}>
       <div className={style.grid_container}>
@@ -10,7 +11,8 @@ const BusSeats = ({ selectSeatNo, selectedSeat, onClick }) => {
           <div key={seatNo.id} className={style.seat}>
             <div
               className={
-                seatNo.seat === selectedSeat
+                // seatedArray?.includes(seatNo.seat) //for select array
+                seatedArray?.includes(seatNo) //for select object
                   ? style.seat_label_color
                   : style.seat_label
               }
@@ -54,6 +56,7 @@ const BusSeats = ({ selectSeatNo, selectedSeat, onClick }) => {
 BusSeats.propTypes = {
   selectSeatNo: PropTypes.arrayOf(PropTypes.object),
   selectedSeat: PropTypes.string,
+  seatedArray: PropTypes.array,
   onClick: PropTypes.func,
 };
 

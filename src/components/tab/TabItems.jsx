@@ -9,6 +9,7 @@ const TabItemComponent = ({
   onItemClicked = () => console.error("You passed no action to the component"),
   isActive = false,
 }) => {
+
   return (
     <div
       className={

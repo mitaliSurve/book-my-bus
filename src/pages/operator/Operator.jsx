@@ -43,12 +43,6 @@ const Operator = ({ onClose, operatorSeat }) => {
             Seat No.
           </label>
           <span className={style.label}>{operatorSeat.seat}</span>
-          {/* <input
-            type="text"
-            id="seatNo"
-            value={operatorSeat.seat}
-            className={style.input}
-          /> */}
 
           <label htmlFor="price" className={cx(style.label, style.label_color)}>
             Price
@@ -62,7 +56,6 @@ const Operator = ({ onClose, operatorSeat }) => {
             placeholder="Your Price.."
             className={style.input}
           />
-          {/* <span className={style.label}>&#x20B9; 500</span> */}
 
           <label className={cx(style.label, style.label_color)}>Booking</label>
           <ToggleSwitch
