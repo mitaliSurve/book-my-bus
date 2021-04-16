@@ -12,11 +12,11 @@ import OperatorContainer from "../Operator";
 
 const btnGroup = [
   { id: 1, title: "Operator" },
-  { id: 2, title: "Customer"},
+  { id: 2, title: "Customer" },
 ];
 
 const Dashboard = () => {
-  const [selectedButton, setSelectedButton] = useState('');
+  const [selectedButton, setSelectedButton] = useState("");
 
   const handleSelect = (btn) => {
     setSelectedButton(btn.title);
@@ -27,11 +27,13 @@ const Dashboard = () => {
       <div className={style.display_flex}>
         <div>
           <BusList name="bus" busList={busesName} />
-          <BusList
-            name="Customer"
-            busList={CustomerName}
-            className={style.margin}
-          />
+          {selectedButton === "Customer" && (
+            <BusList
+              name="Customer"
+              busList={CustomerName}
+              className={style.margin}
+            />
+          )}
         </div>
         <div className={cx(style.display, style.margin)}>
           {btnGroup.map((btn) => (
@@ -49,7 +51,11 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {selectedButton === 'Customer' ? <CustomerContainer /> : <OperatorContainer />}
+      {selectedButton === "Customer" ? (
+        <CustomerContainer />
+      ) : (
+        <OperatorContainer />
+      )}
     </div>
   );
 };

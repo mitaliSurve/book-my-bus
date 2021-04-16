@@ -14,7 +14,7 @@
 .seat {
   width: 70px;
   border-radius: 1.5px;
-  /* margin: 0px auto; */
+  margin: 10px auto;
   border-top: 1px solid;
   border-left: 1px solid;
   border-right: 1px solid;
